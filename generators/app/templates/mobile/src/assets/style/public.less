@@ -1,0 +1,88 @@
+// 注意：
+// 此文件仅用于 vue.config.js 中配置公共变量，
+// 其他less文件中无需另外引用。
+// 具体使用的样式要写在 app.less 文件中。
+
+// 主色
+@color-primary: #6c88ff;
+
+// 辅助色
+@color-info: #a8aec5;
+@color-success: #3eca9d;
+@color-warning: #E6A23C;
+@color-danger: #fc5a7c;
+
+@color-danger-bg: #ffeeee;
+@color-warning-bg: #ffeeee;
+
+// 文字
+@color-text-main: #393b46;
+@color-text-normal: #777777;
+@color-text-sub: #999;
+@color-text-placehoder: #C0C4CC;
+
+// 边框
+@color-border-1: #DCDFE6;
+@color-border-2: #E4E7ED;
+@color-border-3: #EBEEF5;
+@color-border-4: #F2F6FC;
+
+// 背景
+@color-bg: #f8f8f9;
+@color-bg-login: #f5faf9;
+
+// Vant UI Component Colors
+@text-color: @color-text-main;
+@border-color: #ebedf0;
+@active-color: #f2f3f5;
+@background-color: #f7f8fa;
+@background-color-light: #fafafa;
+
+@red: #ee0a24;
+@blue: @color-primary;
+@orange: #ff976a;
+@orange-dark: #ed6a0c;
+@orange-light: #fffbe8;
+@green: @color-primary;
+
+@step-text-color: @color-text-normal;
+@tabs-default-color: @blue;
+
+@border-radius-sm: 4px;
+
+// dialog
+@dialog-confirm-button-text-color: @color-primary;
+
+// tabs
+@title-active-color: @color-primary;
+
+
+// rem尺寸转换
+@base: 750 / 720 * 0.01;
+.px2rem(@name, @px) {
+  @{name}: @px * @base * 1rem;
+}
+
+// flex 垂直水平居中
+.flex-center-row() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.flex-center-col() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// 将元素模拟成卡片外观
+.card() {
+  background: #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  position: relative;
+}
+
+@bottom-bar-height: 60px;

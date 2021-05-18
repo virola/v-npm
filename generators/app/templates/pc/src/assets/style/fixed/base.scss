@@ -1,0 +1,37 @@
+// 优化显示
+html, body {
+  margin: 0px;
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-size: 14px;
+  #app {
+    @extend %full;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  img, video {
+    max-width: 100%;
+  }
+
+  textarea, input {
+    font: inherit;
+  }
+
+  iframe {
+    border: 0;
+  }
+}
+.unslt {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

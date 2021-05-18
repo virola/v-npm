@@ -1,0 +1,16 @@
+{
+  "name": "generator-v-npm",
+  "version": "0.1.0",
+  "description": "yeoman generator for virola's npm project",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yeoman-generator": "^1.0.0"
+  }
+}

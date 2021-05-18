@@ -1,0 +1,277 @@
+@import 'public';
+
+// 补丁 base
+@import '~@/assets/style/fixed/base.scss';
+// 补丁 element
+@import '~@/assets/style/fixed/element.scss';
+
+// 动画
+@import '~@/assets/style/animate/vue-transition.scss';
+
+// 在这里写公用的class
+// 注意 这个文件里只写class
+// mixin等内容请在 public.scss 里书写
+
+.#{$prefix}-border {
+  border: 1px solid $color-border-1;
+}
+.#{$prefix}-border-c {
+  border: 1px solid #ccc;
+}
+
+.#{$prefix}-border-3 {
+  border: 1px solid $color-text-sub;
+}
+
+// 文字相关
+.#{$prefix}-text-center {
+  text-align: center;
+}
+.#{$prefix}-text-right {
+  text-align: right;
+}
+.#{$prefix}-text-left {
+  text-align: left;
+}
+
+// 浮动相关
+.#{$prefix}-fl {
+  float: left;
+}
+.#{$prefix}-fr {
+  float: right;
+}
+
+// flex
+.#{$prefix}-flex {
+  display: flex;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+.text-info {
+  color: $color-info;
+}
+.text-warning {
+  color: $color-warning;
+}
+.text-danger {
+  color: $color-danger;
+}
+.text-tip {
+  color: #999;
+}
+.text-normal {
+  color: $color-text-normal;
+}
+table {
+  // width: 100%;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 9px;
+    text-align: left;
+  }
+
+  &.table-noborder {
+    width: 100%;
+    border: 0;
+  }
+
+  &.table-border {
+    width: 100%;
+    th, td {
+      border: 1px solid #ddd;
+    }
+  }
+}
+
+.common-view-page {
+  padding: 30px;
+}
+.common-form-page {
+  padding: 30px 0;
+}
+
+// 表单提示文字通用样式
+.form-item-tips {
+  color: #949494;
+  font-size: 12px;
+}
+.rules-form {
+  .el-form-item {
+    margin-bottom: 40px;
+  }
+  .el-form-item.el-form-item--small {
+    margin-bottom: 30px;
+  }
+  .form-item-tips {
+    font-size: 12px;
+    line-height: 1;
+    padding-top: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .is-error {
+    .form-item-tips {
+      display: none;
+    }
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+.half-width {
+  width: 50%;
+}
+
+// 上传图片的通用按钮
+.input-upload-btn {
+  overflow: hidden;
+  position: relative;
+
+  input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+// 边距相关
+$sizes: (0, 5, 10, 15, 20);
+
+@for $index from 1 to 6 {
+  .#{$prefix}-m-#{nth($sizes, $index)} { margin: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-mt-#{nth($sizes, $index)} { margin-top: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-mr-#{nth($sizes, $index)} { margin-right: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-mb-#{nth($sizes, $index)} { margin-bottom: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-ml-#{nth($sizes, $index)} { margin-left: #{nth($sizes, $index)}px !important; }
+
+  .#{$prefix}-p-#{nth($sizes, $index)} { padding: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-pt-#{nth($sizes, $index)} { padding-top: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-pr-#{nth($sizes, $index)} { padding-right: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-pb-#{nth($sizes, $index)} { padding-bottom: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-pl-#{nth($sizes, $index)} { padding-left: #{nth($sizes, $index)}px !important; }
+}
+
+// 快速使用
+.#{$prefix}-m { margin: 20px !important; }
+.#{$prefix}-mt { margin-top: 20px !important; }
+.#{$prefix}-mr { margin-right: 20px !important; }
+.#{$prefix}-mb { margin-bottom: 20px !important; }
+.#{$prefix}-ml { margin-left: 20px !important; }
+
+.#{$prefix}-p { padding: 20px !important; }
+.#{$prefix}-pt { padding-top: 20px !important; }
+.#{$prefix}-pr { padding-right: 20px !important; }
+.#{$prefix}-pb { padding-bottom: 20px !important; }
+.#{$prefix}-pl { padding-left: 20px !important; }
+
+.#{$prefix}-m-large { margin: 50px !important; }
+.#{$prefix}-mt-large { margin-top: 50px !important; }
+.#{$prefix}-mr-large { margin-right: 50px !important; }
+.#{$prefix}-mb-large { margin-bottom: 50px !important; }
+.#{$prefix}-ml-large { margin-left: 50px !important; }
+
+.#{$prefix}-p-large { padding: 50px !important; }
+.#{$prefix}-pt-large { padding-top: 50px !important; }
+.#{$prefix}-pr-large { padding-right: 50px !important; }
+.#{$prefix}-pb-large { padding-bottom: 50px !important; }
+.#{$prefix}-pl-large { padding-left: 50px !important; }
+
+// 通用表单标题
+.form-title {
+  padding: 5px 0 5px;
+  margin: 20px 0 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: $color-primary;
+  border-bottom: 1px solid $color-primary;
+}
+
+// 通用搜索框样式
+.search-box {
+  padding: 20px 0 0;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+// 通用翻页样式
+.pagination-box {
+  overflow: hidden;
+}
+
+.pagination-box .el-pagination {
+  float: right;
+  margin: 30px 0;
+}
+.pagination-info {
+  font-size: 14px;
+  color: $color-primary;
+}
+.pagination-box .pagination-info {
+  float: left;
+  margin-top: 36px;
+}
+
+.unslt {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// 通用TABLE样式
+.table-box {
+  .el-table {
+    th {
+      padding: 8px 0;
+      text-align: center;
+    }
+    td {
+      font-size: 12px;
+      padding: 4px 0;
+      text-align: center;
+      .link {
+        display: inline-block;
+        padding: 3px 0;
+        cursor: pointer;
+      }
+      .text-danger {
+        color: $color-danger;
+      }
+    }
+  }
+}
+
+.tabel-box .el-table th {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.tabel-box .el-table td {
+  text-align: center;
+  font-size: 12px;
+  padding: 4px 0;
+}
+
+.hr {
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  margin: 20px 0;
+}
+
+.bg-gray {
+  background-color: $color-bg;
+}
