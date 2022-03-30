@@ -6,3 +6,5 @@ deploy:
   provider: npm
   email: "virola@foxmail.com"
   api_key: "$NPM_TOKEN"
+  on:
+    branch: main
