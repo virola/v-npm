@@ -12,5 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "yeoman-generator": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo 'no specify test file'"
   }
 }
