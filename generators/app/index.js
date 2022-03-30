@@ -16,7 +16,11 @@ module.exports = class extends Generator {
         message: '请选择项目类型',
         choices: [
           {
-            name: 'PC',
+            name: 'PC vue3-ant-design-framework',
+            value: 'vue3-antd-framework'
+          },
+          {
+            name: 'PC-基于d2admin框架(Vue2 + Element UI 2)',
             value: 'pc'
           },
           {

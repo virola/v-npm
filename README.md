@@ -5,3 +5,14 @@
 暂时初始化了自己项目中常用的 PC 、移动端 h5 、基础 nodejs 项目模板。
 
 持续完善中。
+
+需要全局安装 yeoman：
+```
+yarn global add yo
+```
+
+使用：
+
+```
+yo v-npm
+```
